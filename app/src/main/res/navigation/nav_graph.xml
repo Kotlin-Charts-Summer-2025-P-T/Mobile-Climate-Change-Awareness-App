@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/sensorFragment">
+
+    <fragment
+        android:id="@+id/sensorFragment"
+        android:name="com.example.climatechangeawarenessapp.ui.SensorFragment"
+        android:label="Sensor Data" />
+    <fragment
+        android:id="@+id/chartFragment"
+        android:name="com.example.climatechangeawarenessapp.ui.ChartFragment"
+        android:label="Trends" />
+    <fragment
+        android:id="@+id/apiFragment"
+        android:name="com.example.climatechangeawarenessapp.ui.ApiFragment"
+        android:label="Global API Data" />
+</navigation>
