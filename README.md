@@ -63,5 +63,5 @@ An educational Android app developed in **Kotlin** using **Android Studio 2024.2
 ### Setup
 
 ```bash
-git clone https://github.com/yourusername/ClimateChangeAwarenessApp.git
-cd ClimateChangeAwarenessApp
+git clone https://github.com/Kotlin-Charts-Summer-2025-P-T/Mobile-Climate-Change-Awareness-App.git
+cd Mobile-Climate-Change-Awareness-App
