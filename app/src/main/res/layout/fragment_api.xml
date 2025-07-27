@@ -1,26 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/apiFragmentLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:padding="16dp">
 
-    <TextView
-        android:id="@+id/textViewApiTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Climate Data"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textStyle="bold"
-        android:layout_marginBottom="12dp" />
-
-    <TextView
-        android:id="@+id/textViewApiDetails"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Fetching climate data..."
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_marginTop="8dp" />
+        android:orientation="vertical">
 
-</LinearLayout>
+        <!-- Sensor Data Layout -->
+        <LinearLayout
+            android:id="@+id/layoutSensorData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="24dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/textViewLight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Light: -- lux"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/textViewTemperature"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Temperature: -- °C"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/textViewHumidity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Humidity: -- %"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </LinearLayout>
+
+        <!-- Climate Data Layout -->
+        <LinearLayout
+            android:id="@+id/layoutClimateData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewApiTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Climate Data"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:id="@+id/textViewApiDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fetching climate data..."
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

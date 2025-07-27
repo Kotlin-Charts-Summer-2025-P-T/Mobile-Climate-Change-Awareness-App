@@ -1,17 +1,16 @@
-package com.example.climatechangeawarenessapp.network
+package com.example.climatechangeawareness.network
 
-import com.example.climatechangeawarenessapp.model.ClimateResponse
-import retrofit2.Response
+import com.example.climatechangeawarenessapp.model.WeatherResponse
+import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface ApiService {
     @GET("v1/forecast")
-    suspend fun getClimateData(
+    fun getWeather(
         @Query("latitude") latitude: Double,
         @Query("longitude") longitude: Double,
-        @Query("daily") daily: String = "temperature_2m_max,temperature_2m_min",
-        @Query("timezone") timezone: String = "auto"
-    ): Response<ClimateResponse>
+        @Query("current") current: String = "temperature_2m,wind_speed_10m",
+        @Query("hourly") hourly: String = "temperature_2m,relative_humidity_2m,wind_speed_10m"
+    ): Call<WeatherResponse>
 }
-
